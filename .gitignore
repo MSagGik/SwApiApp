@@ -1,0 +1,55 @@
+# Gradle
+.gradle/
+build/
+*/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.vcs.xml
+
+# VS Code
+.vscode/
+
+# Local configuration
+local.properties
+
+# Kotlin / Java
+*.class
+*.kjsm
+
+# Native builds
+.externalNativeBuild/
+.cxx/
+
+# Output
+*.apk
+*.ap_
+
+# Captures (Android Studio)
+captures/
+
+# macOS
+.DS_Store
+
+# Security
+*.keystore
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
