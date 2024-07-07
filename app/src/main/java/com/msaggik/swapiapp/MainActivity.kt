@@ -9,9 +9,8 @@ import com.msaggik.swapiapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private val binding: ActivityMainBinding by lazy {
-        ActivityMainBinding.inflate(layoutInflater)
-    }
+    private var _binding: ActivityMainBinding? = null
+    private val binding: ActivityMainBinding get() = _binding!!
 
     private val navController: NavController by lazy {
         (supportFragmentManager.findFragmentById(R.id.root_fragments) as NavHostFragment).navController
@@ -19,7 +18,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.bottomNavigationMenu.setupWithNavController(navController)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 }
