@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cinema_navigation"
+    app:startDestination="@id/cinemaFragment">
+    <fragment
+        android:id="@+id/cinemaFragment"
+        android:name="com.msaggik.cinema.presentation.ui.CinemaFragment"
+        android:label="fragment_cinema"
+        tools:layout="@layout/fragment_cinema" >
+        <action
+            android:id="@+id/action_cinemaFragment_to_actorFragment"
+            app:destination="@id/actorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/actorFragment"
+        android:name="com.msaggik.cinema.presentation.ui.ActorFragment"
+        android:label="fragment_actor"
+        tools:layout="@layout/fragment_actor" >
+        <action
+            android:id="@+id/action_actorFragment_to_planetFragment"
+            app:destination="@id/planetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/planetFragment"
+        android:name="com.msaggik.cinema.presentation.ui.PlanetFragment"
+        android:label="fragment_planet"
+        tools:layout="@layout/fragment_planet" />
+</navigation>
