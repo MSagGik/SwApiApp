@@ -3,7 +3,8 @@
     <string name="cinema_universe">Кино вселенная</string>
     <string name="profile">Профиль</string>
     <string name="setting">Настройки</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="place_holder">Данная страница в разработке</string>
+    <string name="no_connection">Проверьте подключение к интернету</string>
+    <string name="error">Что-то пошло не так</string>
 </resources>

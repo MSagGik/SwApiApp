@@ -52,4 +52,5 @@ dependencies {
     implementation(libs.koin)
 
     implementation(project(":common_ui"))
+    implementation(project(":common_util"))
 }

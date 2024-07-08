@@ -46,9 +46,9 @@ compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide
 room = { module = "androidx.room:room-common", version.ref = "room" }
 runtime-room = { module = "androidx.room:room-runtime", version.ref = "room" }
 processor-room = { module = "androidx.room:room-compiler", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-

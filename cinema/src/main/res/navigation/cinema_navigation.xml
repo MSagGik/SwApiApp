@@ -10,16 +10,16 @@
         android:label="fragment_cinema"
         tools:layout="@layout/fragment_cinema" >
         <action
-            android:id="@+id/action_cinemaFragment_to_actorFragment"
-            app:destination="@id/actorFragment" />
+            android:id="@+id/action_cinemaFragment_to_characterFragment"
+            app:destination="@id/characterFragment" />
     </fragment>
     <fragment
-        android:id="@+id/actorFragment"
-        android:name="com.msaggik.cinema.presentation.ui.ActorFragment"
-        android:label="fragment_actor"
-        tools:layout="@layout/fragment_actor" >
+        android:id="@+id/characterFragment"
+        android:name="com.msaggik.cinema.presentation.ui.CharacterFragment"
+        android:label="fragment_character"
+        tools:layout="@layout/fragment_character" >
         <action
-            android:id="@+id/action_actorFragment_to_planetFragment"
+            android:id="@+id/action_characterFragment_to_planetFragment"
             app:destination="@id/planetFragment" />
     </fragment>
     <fragment
