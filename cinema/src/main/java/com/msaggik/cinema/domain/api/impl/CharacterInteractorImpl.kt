@@ -1,18 +1,18 @@
 package com.msaggik.cinema.domain.api.impl
 
-import com.msaggik.cinema.domain.api.CharacterInteraptor
+import com.msaggik.cinema.domain.api.CharacterInteractor
 import com.msaggik.cinema.domain.repository.CharactersRepository
 import com.msaggik.common_util.Resource
 import java.util.concurrent.Executors
 
-class CharacterInteraptorImpl (
+class CharacterInteractorImpl (
     private val repository: CharactersRepository
-) : CharacterInteraptor {
+) : CharacterInteractor {
 
     override fun getCharacter(
         filmId: Int,
         charactersId: List<Int>,
-        consumer: CharacterInteraptor.CharacterConsumer
+        consumer: CharacterInteractor.CharacterConsumer
     ) {
         Executors.newCachedThreadPool().execute {
             when(val resource = repository.getCharacters(filmId, charactersId)) {

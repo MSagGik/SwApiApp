@@ -2,7 +2,7 @@ package com.msaggik.cinema.domain.api
 
 import com.msaggik.cinema.domain.model.film.Film
 
-interface FilmsInteraptor {
+interface FilmsInteractor {
     fun getFilms(consumer:  FilmsConsumer)
 
     interface FilmsConsumer {

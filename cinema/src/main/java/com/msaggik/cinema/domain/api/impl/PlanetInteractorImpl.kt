@@ -1,15 +1,15 @@
 package com.msaggik.cinema.domain.api.impl
 
-import com.msaggik.cinema.domain.api.PlanetInteraptor
+import com.msaggik.cinema.domain.api.PlanetInteractor
 import com.msaggik.cinema.domain.repository.PlanetRepository
 import com.msaggik.common_util.Resource
 import java.util.concurrent.Executors
 
-class PlanetInteraptorImpl (
+class PlanetInteractorImpl (
     private val repository: PlanetRepository
-) : PlanetInteraptor {
+) : PlanetInteractor {
 
-    override fun getPlanet(id: Int, consumer: PlanetInteraptor.PlanetConsumer) {
+    override fun getPlanet(id: Int, consumer: PlanetInteractor.PlanetConsumer) {
         Executors.newCachedThreadPool().execute {
             when(val resource = repository.getPlanet(id)) {
                 is Resource.Success -> consumer.consume(resource.data, null)

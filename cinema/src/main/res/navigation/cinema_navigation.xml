@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cinema_navigation"
-    app:startDestination="@id/cinemaFragment">
+    app:startDestination="@id/filmsFragment">
     <fragment
-        android:id="@+id/cinemaFragment"
-        android:name="com.msaggik.cinema.presentation.ui.CinemaFragment"
-        android:label="fragment_cinema"
-        tools:layout="@layout/fragment_cinema" >
+        android:id="@+id/filmsFragment"
+        android:name="com.msaggik.cinema.presentation.ui.FilmsFragment"
+        android:label="fragment_films"
+        tools:layout="@layout/fragment_films" >
         <action
-            android:id="@+id/action_cinemaFragment_to_characterFragment"
+            android:id="@+id/action_filmsFragment_to_characterFragment"
             app:destination="@id/characterFragment" />
     </fragment>
     <fragment
