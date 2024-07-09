@@ -5,7 +5,6 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -16,15 +15,11 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.msaggik.cinema.R
 import com.msaggik.cinema.databinding.FragmentCharacterBinding
-import com.msaggik.cinema.databinding.FragmentFilmsBinding
 import com.msaggik.cinema.domain.model.character.Character
 import com.msaggik.cinema.domain.model.film.Film
 import com.msaggik.cinema.presentation.ui.adapters.CharacterAdapter
-import com.msaggik.cinema.presentation.ui.adapters.FilmsAdapter
 import com.msaggik.cinema.presentation.view_model.CharactersViewModel
-import com.msaggik.cinema.presentation.view_model.FilmsViewModel
 import com.msaggik.cinema.presentation.view_model.state.CharactersState
-import com.msaggik.cinema.presentation.view_model.state.FilmsState
 import com.msaggik.common_util.Utils
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
@@ -84,6 +79,7 @@ class CharacterFragment : Fragment() {
             binding.nothingFound,
             binding.networkProblems
         )
+        binding.nameFilm.text = film?.title
         return binding.root
     }
 

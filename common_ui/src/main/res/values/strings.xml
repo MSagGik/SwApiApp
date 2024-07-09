@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SwApiApp</string>
+    <string name="app_name">SWAPI App</string>
     <string name="cinema_universe">Кино вселенная</string>
     <string name="profile">Профиль</string>
     <string name="setting">Настройки</string>
@@ -12,6 +12,7 @@
     <string name="nothing_found">Ничего не найдено</string>
     <string name="network_problems" >Проблемы с интернетом</string>
     <string name="name_film">Название фильма</string>
+    <string name="name_film_form">Фильм %1$s</string>
     <string name="director_film">Директор</string>
     <string name="producer_film">Продюсер</string>
     <string name="release_date_film">Дата релиза</string>

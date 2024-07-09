@@ -1,7 +1,6 @@
 package com.msaggik.data.repository_impl
 
 import android.content.Context
-import android.util.Log
 import com.msaggik.cinema.domain.model.character.Character
 import com.msaggik.cinema.domain.repository.CharactersRepository
 import com.msaggik.common_ui.R

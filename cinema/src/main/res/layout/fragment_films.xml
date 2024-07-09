@@ -36,7 +36,7 @@
         android:paddingStart="@dimen/dimen_10"
         android:textSize="@dimen/text_size_16s"
         android:textColor="@color/sky_500"
-        android:textColorHint="@color/sky_400"
+        android:textColorHint="@color/grey"
         android:drawablePadding="@dimen/dimen_8"
         android:imeOptions="actionDone"
         android:singleLine="true"/>
