@@ -9,7 +9,7 @@ data class PlanetNetDto(
     var rotationPeriod: String? = null,
     @SerializedName("orbital_period")
     var orbitalPeriod: String? = null,
-    var diameter: Int? = 0,
+    var diameter: String? = null,
     var climate: String? = null,
     var gravity: String? = null,
     var terrain: String? = null,

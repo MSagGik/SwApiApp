@@ -5,7 +5,7 @@ data class Planet(
     val name: String,
     val rotationPeriod: String,
     val orbitalPeriod: String,
-    val diameter: Int,
+    val diameter: String,
     val climate: String,
     val gravity: String,
     val terrain: List<String>,

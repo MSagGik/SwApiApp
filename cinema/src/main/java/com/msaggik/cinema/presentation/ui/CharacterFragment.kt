@@ -5,6 +5,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -102,7 +103,6 @@ class CharacterFragment : Fragment() {
     }
 
     private val listener: View.OnClickListener = object : View.OnClickListener {
-        @SuppressLint("NotifyDataSetChanged", "SetTextI18n")
         override fun onClick(p0: View?) {
             when (p0?.id) {
                 R.id.button_back -> {
@@ -124,7 +124,7 @@ class CharacterFragment : Fragment() {
     private fun characterSelection(character: Character) {
         findNavController().navigate(
             R.id.action_characterFragment_to_planetFragment,
-            PlanetFragment.createArgs(character.homeWorld))
+            PlanetFragment.createArgs(character.name, character.homeWorld))
     }
 
     private fun render(state: CharactersState) {

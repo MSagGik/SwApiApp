@@ -16,7 +16,7 @@ data class PlanetDbDto(
     val rotationPeriod: String,
     @ColumnInfo(name = "orbital_period")
     val orbitalPeriod: String,
-    val diameter: Int,
+    val diameter: String,
     val climate: String,
     val gravity: String,
     val terrain: String,
