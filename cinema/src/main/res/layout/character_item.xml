@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_item_film"
+    android:layout_marginVertical="@dimen/dimen_8"
+    android:padding="@dimen/dimen_16">
+
+    <TextView
+        android:id="@+id/name_character"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_24"
+        android:text="@string/name_character"
+        android:fontFamily="@font/roboto_bold"
+        android:textFontWeight="500"
+        android:textSize="@dimen/text_size_16s"
+        android:layout_gravity="top|start"
+        android:textColor="@color/dark_1000"/>
+
+    <TextView
+        android:id="@+id/height_character"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_20"
+        android:text="@string/height_character"
+        android:fontFamily="@font/roboto_regular"
+        android:textFontWeight="500"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:layout_gravity="top|start"
+        android:textColor="@color/dark_1000"/>
+
+    <TextView
+        android:id="@+id/date_of_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_20"
+        android:text="@string/date_of_birth"
+        android:fontFamily="@font/roboto_regular"
+        android:textFontWeight="500"
+        android:layout_marginTop="@dimen/dimen_50"
+        android:layout_gravity="top|start"
+        android:textColor="@color/dark_1000"/>
+
+</FrameLayout>
