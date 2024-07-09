@@ -19,7 +19,7 @@
         android:textColor="@color/sky_500"/>
 
     <EditText
-        android:id="@+id/input_search"
+        android:id="@+id/input_filter"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_50"
         android:ems="10"
@@ -56,7 +56,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="@dimen/dimen_16"
-        android:layout_marginTop="@dimen/dimen_122"
+        android:layout_marginTop="@dimen/dimen_102"
+        android:paddingTop="@dimen/dimen_8"
         android:visibility="gone"/>
 
     <ProgressBar

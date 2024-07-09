@@ -25,7 +25,7 @@ class FilmsRepositoryImpl(
         var filmsDb = filmsDao.getDbFilms()
 
         if(filmsDb.isNotEmpty()) {
-            resource = Resource.Success(filmsDb.map { it.toFilm() })
+            resource = Resource.Success(filmsDb.map { it.toFilm() }.sortedBy { it.id })
         } else {
             val response = network.doRequestGetFilms()
             resource = when(response.resultCode) {
@@ -33,7 +33,7 @@ class FilmsRepositoryImpl(
                 200 -> {
                     val listFilmNet = (response as FilmsNetDto).results.map { it.toFilmDb() } ?: emptyList()
                     filmsDao.insertDbFilms(listFilmNet)
-                    Resource.Success(listFilmNet.map { it.toFilm() })
+                    Resource.Success(listFilmNet.map { it.toFilm() }.sortedBy { it.id })
                 }
                 else -> Resource.Error(context.getString(R.string.error))
             }

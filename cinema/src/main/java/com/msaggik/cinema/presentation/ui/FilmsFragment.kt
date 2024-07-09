@@ -1,14 +1,19 @@
 package com.msaggik.cinema.presentation.ui
 
 import android.annotation.SuppressLint
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.os.SystemClock
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.msaggik.cinema.R
@@ -21,12 +26,18 @@ import com.msaggik.common_util.Utils
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 private const val DELAY_CLICK_FILM = 1000L
+private const val FILTER_DEBOUNCE_DELAY = 1000L
+private val FILTER_TOKEN = Any()
 class FilmsFragment : Fragment() {
 
     private var _binding: FragmentFilmsBinding? = null
     private val binding: FragmentFilmsBinding get() = _binding!!
 
     private var viewArray: Array<View>? = null
+    private var filterFilm = ""
+
+    private var latestFilterText: String? = null
+    private val handlerFilterFilm = Handler(Looper.getMainLooper())
 
     private val filmsViewModel: FilmsViewModel by viewModel()
 
@@ -60,6 +71,8 @@ class FilmsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        Utils.visibilityView(viewArray, binding.loadingListFilm)
+
         binding.filmsList.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.filmsList.adapter = filmsAdapter
@@ -67,6 +80,77 @@ class FilmsFragment : Fragment() {
         filmsViewModel.getStateLiveData().observe(viewLifecycleOwner) {
             render(it)
         }
+
+        binding.inputFilter.addTextChangedListener(inputSearchWatcher)
+        binding.buttonClear.setOnClickListener(listener)
+    }
+
+    private val listener: View.OnClickListener = object : View.OnClickListener {
+        @SuppressLint("NotifyDataSetChanged", "SetTextI18n")
+        override fun onClick(p0: View?) {
+            when (p0?.id) {
+                R.id.button_clear -> {
+                    binding.inputFilter.setText("")
+                    binding.buttonClear.visibility = View.GONE
+                    filmsAdapter.setFilmList(filmList)
+                    filmsAdapter.notifyDataSetChanged()
+                }
+            }
+        }
+    }
+
+    private val inputSearchWatcher = object : TextWatcher {
+        override fun beforeTextChanged(oldText: CharSequence?, p1: Int, p2: Int, p3: Int) {
+        }
+
+        @SuppressLint("NotifyDataSetChanged")
+        override fun onTextChanged(inputText: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            val isInputText = !inputText.isNullOrEmpty()
+            binding.buttonClear.isVisible = isInputText
+            if (isInputText) {
+                filterFilm = inputText.toString()
+                filterDebounce(filterFilm)
+            } else {
+                filmsAdapter.setFilmList(filmList)
+                filmsAdapter.notifyDataSetChanged()
+            }
+        }
+
+        override fun afterTextChanged(resultText: Editable?) {
+        }
+    }
+
+    fun filterDebounce(changedText: String) {
+        if (latestFilterText == changedText) {
+            return
+        }
+
+        latestFilterText = changedText
+        handlerFilterFilm.removeCallbacksAndMessages(FILTER_TOKEN)
+
+        val filterRunnable = Runnable { filterFilms(changedText) }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            handlerFilterFilm.postDelayed(
+                filterRunnable,
+                FILTER_TOKEN,
+                FILTER_DEBOUNCE_DELAY
+            )
+        } else {
+            val postTime = SystemClock.uptimeMillis() + FILTER_DEBOUNCE_DELAY
+            handlerFilterFilm.postAtTime(
+                filterRunnable,
+                FILTER_DEBOUNCE_DELAY,
+                postTime,
+            )
+        }
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    private fun filterFilms(filter: String) {
+        val filterList = filmList.filter { it.title.contains(filter) }
+        filmsAdapter.setFilmList(filterList)
+        filmsAdapter.notifyDataSetChanged()
     }
 
     private fun render(state: FilmsState) {

@@ -11,6 +11,10 @@ class FilmsAdapter (filmListAdd: List<Film>, private val filmClickListener: Film
 
     private var filmList = filmListAdd
 
+    fun setFilmList(filmListUpdate: List<Film>) {
+        filmList = filmListUpdate
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilmViewHolder {
         val layoutInspector = LayoutInflater.from(parent.context)
         return FilmViewHolder(FilmItemBinding.inflate(layoutInspector, parent, false))
