@@ -9,6 +9,6 @@ data class Film(
     val director: String,
     val producer: List<String>,
     val releaseDate: LocalDate?,
-    val characters: List<String>,
-    val planets: List<String>,
+    val characters: List<Int>,
+    val planets: List<Int>,
 )

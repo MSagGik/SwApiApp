@@ -21,6 +21,13 @@ object Utils {
         return localDate
     }
 
+    fun visibilityView(views: Array<View>? = emptyArray(), v: View) {
+        if (views != null) {
+            for(view in views) view.visibility = View.GONE
+        }
+        v.visibility = View.VISIBLE
+    }
+
     fun doToPx(dp: Float, context: Context): Int {
         return TypedValue
             .applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.resources.displayMetrics)

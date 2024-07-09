@@ -42,6 +42,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.nav.ui)
+    implementation(libs.nav.fragment)
     implementation(libs.koin)
     implementation(libs.gson)
     implementation(libs.retrofit)
@@ -49,11 +52,9 @@ dependencies {
     implementation(libs.glide)
     annotationProcessor(libs.compiler)
     implementation(libs.logging.interceptor)
-
-    implementation (libs.room.ktx)
     implementation(libs.room)
     implementation(libs.runtime.room)
-    annotationProcessor(libs.processor.room)
+    kapt(libs.processor.room)
 
     implementation(project(":cinema"))
     implementation(project(":common_ui"))

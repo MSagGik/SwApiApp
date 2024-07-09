@@ -7,4 +7,15 @@
     <string name="place_holder">Данная страница в разработке</string>
     <string name="no_connection">Проверьте подключение к интернету</string>
     <string name="error">Что-то пошло не так</string>
+    <string name="search_film">Поиск фильма</string>
+    <string name="filter_film">Фильтр</string>
+    <string name="nothing_found">Ничего не найдено</string>
+    <string name="network_problems" >Проблемы с интернетом</string>
+    <string name="name_film">Название фильма</string>
+    <string name="director_film">Директор</string>
+    <string name="producer_film">Продюсер</string>
+    <string name="release_date_film">Дата релиза</string>
+    <string name="director_film_form">Директор %1$s</string>
+    <string name="producer_film_form">Продюсер(ы) %1$s</string>
+    <string name="release_date_film_form">%1$s год</string>
 </resources>

@@ -8,7 +8,6 @@ import com.msaggik.cinema.domain.api.CharacterInteractor
 import com.msaggik.cinema.domain.model.character.Character
 import com.msaggik.cinema.presentation.view_model.state.CharactersState
 
-
 class CharactersViewModel(
     private val filmId: Int,
     private val charactersId: List<Int>,

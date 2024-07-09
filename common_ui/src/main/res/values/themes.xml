@@ -1,9 +1,6 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+<resources>
     <style name="Base.Theme.SwApiApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="android:statusBarColor">@color/dark_yellow</item>
+        <item name="android:statusBarColor">@color/sky_500</item>
     </style>
 
     <style name="Theme.SwApiApp" parent="Base.Theme.SwApiApp" />

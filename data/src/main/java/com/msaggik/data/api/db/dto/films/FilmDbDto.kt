@@ -20,6 +20,6 @@ data class FilmDbDto(
     val producer: String,
     @ColumnInfo(name = "release_date")
     val releaseDate: String,
-    val characters: List<String>,
-    val planets: List<String>,
+    val characters: List<Int>,
+    val planets: List<Int>,
 )

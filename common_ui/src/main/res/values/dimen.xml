@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="dimen_0.5">0.5dp</dimen>
     <dimen name="dimen_1">1dp</dimen>
     <dimen name="dimen_2">2dp</dimen>
     <dimen name="dimen_4">4dp</dimen>
@@ -20,7 +21,9 @@
     <dimen name="dimen_41">41dp</dimen>
     <dimen name="dimen_48">48dp</dimen>
     <dimen name="dimen_50">50dp</dimen>
+    <dimen name="dimen_52">52dp</dimen>
     <dimen name="dimen_60">60dp</dimen>
+    <dimen name="dimen_68">68dp</dimen>
     <dimen name="dimen_70">70dp</dimen>
     <dimen name="dimen_79">79dp</dimen>
     <dimen name="dimen_88">88dp</dimen>
@@ -42,7 +45,8 @@
     <dimen name="text_size_bottom_navigation_menu">10sp</dimen>
     <dimen name="text_size_14s">14sp</dimen>
     <dimen name="text_size_16s">16sp</dimen>
-    <dimen name="dimen_20s">20sp</dimen>
+    <dimen name="text_size_20s">20sp</dimen>
     <dimen name="text_size_22s">22sp</dimen>
+    <dimen name="text_size_25s">25sp</dimen>
     <dimen name="text_size_30s">30sp</dimen>
 </resources>
