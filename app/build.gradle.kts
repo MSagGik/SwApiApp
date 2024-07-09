@@ -55,6 +55,7 @@ dependencies {
     implementation(libs.koin)
 
     implementation(project(":common_ui"))
+    implementation(project(":data"))
     implementation(project(":cinema"))
     implementation(project(":profile"))
     implementation(project(":setting"))

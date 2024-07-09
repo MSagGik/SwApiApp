@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -50,6 +52,16 @@ dependencies {
     implementation(libs.nav.ui)
     implementation(libs.nav.fragment)
     implementation(libs.koin)
+    implementation(libs.gson)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)
+    implementation(libs.logging.interceptor)
+    implementation(libs.room)
+    implementation(libs.runtime.room)
+    kapt(libs.processor.room)
 
     implementation(project(":common_ui"))
+    implementation(project(":common_util"))
 }
