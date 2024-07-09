@@ -92,6 +92,7 @@ class FilmsFragment : Fragment() {
                 R.id.button_clear -> {
                     binding.inputFilter.setText("")
                     binding.buttonClear.visibility = View.GONE
+                    Utils.closeKeyBoard(requireContext(), binding.inputFilter)
                     filmsAdapter.setFilmList(filmList)
                     filmsAdapter.notifyDataSetChanged()
                 }

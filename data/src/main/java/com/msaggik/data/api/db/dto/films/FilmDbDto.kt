@@ -13,6 +13,7 @@ import com.msaggik.data.api.db.dto.films.converter.Converter
 data class FilmDbDto(
     @PrimaryKey
     val id: Int,
+    val episodeId: Int,
     val title: String,
     @ColumnInfo(name = "opening_crawl")
     val openingCrawl: String,

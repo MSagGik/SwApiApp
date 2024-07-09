@@ -9,5 +9,6 @@ fun CharacterDbDto.toCharacter() =
         name = name,
         height = height,
         birthYear = birthYear,
+        filmsId = filmsId,
         homeWorld = homeWorld
     )

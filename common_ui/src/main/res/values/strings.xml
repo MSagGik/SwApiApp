@@ -18,4 +18,11 @@
     <string name="director_film_form">Директор %1$s</string>
     <string name="producer_film_form">Продюсер(ы) %1$s</string>
     <string name="release_date_film_form">%1$s год</string>
+    <string name="name_character">Название персонажа</string>
+    <string name="height_character">Рост персонажа</string>
+    <string name="date_of_birth">Дата рождения</string>
+    <string name="home_world">Родная планета</string>
+    <string name="height_character_form">Рост %1$s</string>
+    <string name="date_of_birth_form">Дата рождения %1$s</string>
+    <string name="home_world_form">Родная планета %1$s</string>
 </resources>

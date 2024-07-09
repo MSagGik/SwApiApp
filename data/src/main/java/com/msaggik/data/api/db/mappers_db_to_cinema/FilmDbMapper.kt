@@ -7,6 +7,7 @@ import com.msaggik.data.api.db.dto.films.FilmDbDto
 fun FilmDbDto.toFilm() =
     Film(
         id = id,
+        episodeId = episodeId,
         title = title,
         openingCrawl = openingCrawl,
         director = director,

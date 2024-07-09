@@ -58,6 +58,7 @@
         android:layout_marginHorizontal="@dimen/dimen_16"
         android:layout_marginTop="@dimen/dimen_102"
         android:paddingTop="@dimen/dimen_8"
+        tools:listitem="@layout/film_item"
         android:visibility="gone"/>
 
     <ProgressBar

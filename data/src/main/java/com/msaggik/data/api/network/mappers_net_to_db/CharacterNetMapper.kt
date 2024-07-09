@@ -10,5 +10,6 @@ fun CharacterNetDto.toCharacterDb() =
         name = name,
         height = height ?: "",
         birthYear = birthYear ?: "",
+        filmsId = "*${films.map { it.toUri().lastPathSegment ?: 0 }.joinToString("*")}*",
         homeWorld = homeworld?.toUri()?.lastPathSegment?.toInt() ?: 0
     )

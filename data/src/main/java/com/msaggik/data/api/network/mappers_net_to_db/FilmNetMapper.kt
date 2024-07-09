@@ -6,7 +6,8 @@ import com.msaggik.data.api.network.dto.response.entities.films.FilmNetDto
 
 fun FilmNetDto.toFilmDb() =
     FilmDbDto(
-        id = episodeId,
+        id = id.toUri().lastPathSegment?.toInt() ?: 0,
+        episodeId = episodeId,
         title = title ?: "",
         openingCrawl = openingCrawl ?: "",
         director = director ?: "",

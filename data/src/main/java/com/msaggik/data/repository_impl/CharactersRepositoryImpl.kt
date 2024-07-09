@@ -1,6 +1,7 @@
 package com.msaggik.data.repository_impl
 
 import android.content.Context
+import android.util.Log
 import com.msaggik.cinema.domain.model.character.Character
 import com.msaggik.cinema.domain.repository.CharactersRepository
 import com.msaggik.common_ui.R
@@ -28,7 +29,7 @@ class CharactersRepositoryImpl(
         val listCharacter: MutableList<CharacterDbDto> = emptyList<CharacterDbDto>().toMutableList()
         var characterDb = charactersDao.getDbCharacters(filmId)
 
-        if (characterDb.isNotEmpty()) {
+        if (characterDb.size == charactersId.size) {
             return Resource.Success(characterDb.map { it.toCharacter() })
         } else {
             for(id in charactersId) {

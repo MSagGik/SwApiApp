@@ -19,5 +19,6 @@ data class FilmNetDto(
     var species: ArrayList<String> = arrayListOf(),
     var created: String? = null,
     var edited: String? = null,
-    var url: String? = null
+    @SerializedName("url")
+    var id: String
 )
