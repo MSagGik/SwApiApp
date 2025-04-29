@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_1000">#161717</color>
+    <color name="dark_yellow">#FF151510</color>
+    <color name="light_yellow">#FFA19A4A</color>
+    <color name="lavender_100">#FF9C99BA</color>
+    <color name="lavender_300">#FF6055D0</color>
+    <color name="lavender_500">#FF423B8E</color>
+    <color name="coral_500">#FFEA6550</color>
+    <color name="blue_500">#FF4E5ED5</color>
+    <color name="sky_100">#FFF2FBFD</color>
+    <color name="sky_200">#FFE5F7FB</color>
+    <color name="sky_300">#FFBBE4F3</color>
+    <color name="sky_400">#FF5279A3</color>
+    <color name="sky_500">#FF333E43</color>
+    <color name="grey">#FF6F7477</color>
+</resources>

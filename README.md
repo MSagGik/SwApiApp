@@ -11,7 +11,7 @@
 * Многомодульность реализуется по следующей схеме:
 
 <p align="left">
-<img src="media/multi_module_application_diagram.png"/>
+<img src="media/multi_module_application_diagram.webp"/>
 </p>
 
 В данной схеме слой **:data** вынесен в отдельный модуль для удобства масштабирования приложения
@@ -19,17 +19,17 @@
 * Модуль **:cinema** реализован в соответствии с чистой архитектурой паттерна MVVM:
 
 <p align="left">
-<img src="media/clean_module_architecture.png"/>
+<img src="media/clean_module_architecture.webp"/>
 </p>
 
 * Приложение протестированно на эмуляторе и реальном смартфоне с последующим устранением выявленных багов
 * Скриншоты разработанного приложения:
 
 <p align="left">
-<img src="media/application_screenshots_a.png"/>
+<img src="media/swapi_page_a-ru.webp"/>
 </p>
 <p align="left">
-<img src="media/application_screenshots_b.png"/>
+<img src="media/swapi_page_b-ru.webp"/>
 </p>
 
 Мобильное приложение разработано в учебных/образовательных целях на основе общедоступного [REST API SWAPI](https://swapi.dev/) https://swapi.dev/ (дата обращения 09 июля 2024 года)
