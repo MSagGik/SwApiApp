@@ -7,10 +7,10 @@ plugins {
 
 android {
     namespace = "com.msaggik.cinema"
-    compileSdk = 34
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        minSdk = 29
+        minSdk = libs.versions.minSdk.get().toInt()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -19,21 +19,33 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
+            enableUnitTestCoverage = false
+            enableAndroidTestCoverage = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
+        debug {
+            isMinifyEnabled = false
+            enableUnitTestCoverage = false
+            enableAndroidTestCoverage = false
+        }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = libs.versions.jvmTarget.get()
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
+    }
+    kapt {
+        correctErrorTypes = true
+        useBuildCache = true
     }
 }
 
