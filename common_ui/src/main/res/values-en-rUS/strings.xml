@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SwAPI App</string>
+    <string name="cinema_universe">Cinema Universe</string>
+    <string name="profile">Profile</string>
+    <string name="setting">Settings</string>
+    <string name="place_holder">This page is under development</string>
+    <string name="no_connection">Please check your internet connection</string>
+    <string name="error">Something went wrong</string>
+    <string name="search_film">Search film</string>
+    <string name="filter_film">Filter</string>
+    <string name="nothing_found">Nothing found</string>
+    <string name="network_problems">Network problems</string>
+    <string name="name_film">Film title</string>
+    <string name="name_film_form">Film %1$s</string>
+    <string name="director_film">Director</string>
+    <string name="producer_film">Producer</string>
+    <string name="release_date_film">Release date</string>
+    <string name="director_film_form">Director %1$s</string>
+    <string name="producer_film_form">Producer(s) %1$s</string>
+    <string name="release_date_film_form">%1$s year</string>
+    <string name="name_character">Character name</string>
+    <string name="height_character">Character height</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="home_world">Character\'s homeworld</string>
+    <string name="height_character_form">Height %1$s</string>
+    <string name="date_of_birth_form">Date of birth %1$s</string>
+    <string name="home_world_form">Homeworld %1$s</string>
+    <string name="name_planet">Planet name</string>
+    <string name="name_planet_form">Planet name %1$s</string>
+    <string name="diameter_planet">Planet diameter</string>
+    <string name="type_climate_planet">Climate type</string>
+    <string name="gravity_planet">Gravity</string>
+    <string name="type_landscape_planet">Terrain type</string>
+    <string name="population_planet">Population</string>
+    <string name="population_planet_form">Population %1$s</string>
+    <string name="diameter_planet_form">Planet diameter %1$s</string>
+    <string name="type_climate_planet_form">Climate type %1$s</string>
+    <string name="gravity_planet_form">Gravity %1$s</string>
+    <string name="type_landscape_planet_form">Terrain type %1$s</string>
+    <string name="something_went_wrong">Something went wrong</string>
+</resources>

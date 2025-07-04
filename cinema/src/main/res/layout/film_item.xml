@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_item_film"
+    android:layout_marginVertical="@dimen/dimen_8"
+    android:padding="@dimen/dimen_16">
+
+    <TextView
+        android:id="@+id/name_film"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_24"
+        android:text="@string/name_film"
+        android:fontFamily="@font/roboto_bold"
+        android:textFontWeight="500"
+        android:textSize="@dimen/text_size_16s"
+        android:layout_gravity="top|start"
+        android:textColor="@color/dark_1000"/>
+
+    <TextView
+        android:id="@+id/director_film"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_20"
+        android:text="@string/director_film"
+        android:fontFamily="@font/roboto_regular"
+        android:textFontWeight="500"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:layout_gravity="top|start"
+        android:textColor="@color/dark_1000"/>
+
+    <TextView
+        android:id="@+id/producer_film"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_20"
+        android:text="@string/producer_film"
+        android:fontFamily="@font/roboto_regular"
+        android:textFontWeight="500"
+        android:layout_marginTop="@dimen/dimen_50"
+        android:layout_gravity="top|start"
+        android:textColor="@color/dark_1000"/>
+
+    <TextView
+        android:id="@+id/release_date_film"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_20"
+        android:text="@string/release_date_film"
+        android:fontFamily="@font/roboto_italic"
+        android:textFontWeight="500"
+
+        android:layout_gravity="top|end"
+        android:textColor="@color/coral_500"/>
+</FrameLayout>

@@ -21,4 +21,9 @@ dependencyResolutionManagement {
 
 rootProject.name = "SwApiApp"
 include(":app")
- 
+include(":common_ui")
+include(":data")
+include(":common_util")
+include(":cinema")
+include(":profile")
+include(":setting")

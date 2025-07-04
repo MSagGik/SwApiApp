@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.FilmsFragment">
+
+    <TextView
+        android:id="@+id/panel_header"
+        android:layout_width = "wrap_content"
+        android:layout_height="@dimen/dimen_30"
+        android:text="@string/search_film"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:textSize="@dimen/text_size_16s"
+        android:fontFamily="@font/roboto_bold"
+        android:textFontWeight="500"
+        android:textColor="@color/sky_500"/>
+
+    <EditText
+        android:id="@+id/input_filter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:ems="10"
+        android:lines="1"
+        android:layout_marginTop="@dimen/dimen_52"
+        android:layout_marginHorizontal="@dimen/dimen_16"
+        android:background="@drawable/shape_search_film"
+        android:inputType="text"
+        android:hint="@string/filter_film"
+        android:fontFamily="@font/roboto_light"
+        android:textFontWeight="300"
+        android:drawableStart="@drawable/ic_search"
+        android:drawableTint="@color/sky_500"
+        android:paddingStart="@dimen/dimen_10"
+        android:textSize="@dimen/text_size_16s"
+        android:textColor="@color/sky_500"
+        android:textColorHint="@color/grey"
+        android:drawablePadding="@dimen/dimen_8"
+        android:imeOptions="actionDone"
+        android:singleLine="true"/>
+
+    <ImageView
+        android:id="@+id/button_clear"
+        android:layout_width="@dimen/dimen_17"
+        android:layout_height="@dimen/dimen_17"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="@dimen/dimen_68"
+        android:layout_marginEnd="@dimen/dimen_24"
+        app:srcCompat="@drawable/ic_close"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/films_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_102"
+        android:paddingTop="@dimen/dimen_8"
+        tools:listitem="@layout/film_item"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/loading_list_film"
+        android:layout_width="@dimen/dimen_30"
+        android:layout_height="@dimen/dimen_30"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/sky_500"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/nothing_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto_light"
+        android:textColor="@color/sky_500"
+        android:textSize="@dimen/text_size_16s"
+        android:textFontWeight="300"
+        android:text="@string/nothing_found"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/something_went_wrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto_light"
+        android:textColor="@color/sky_500"
+        android:textSize="@dimen/text_size_16s"
+        android:textFontWeight="300"
+        android:text="@string/something_went_wrong"
+        android:visibility="gone" />
+
+</FrameLayout>

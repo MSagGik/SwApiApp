@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SwAPI App</string>
+    <string name="cinema_universe">Кино вселенная</string>
+    <string name="profile">Профиль</string>
+    <string name="setting">Настройки</string>
+    <string name="place_holder">Данная страница в разработке</string>
+    <string name="no_connection">Проверьте подключение к интернету</string>
+    <string name="error">Что-то пошло не так</string>
+    <string name="search_film">Поиск фильма</string>
+    <string name="filter_film">Фильтр</string>
+    <string name="nothing_found">Ничего не найдено</string>
+    <string name="network_problems" >Проблемы с интернетом</string>
+    <string name="name_film">Название фильма</string>
+    <string name="name_film_form">Фильм %1$s</string>
+    <string name="director_film">Директор</string>
+    <string name="producer_film">Продюсер</string>
+    <string name="release_date_film">Дата релиза</string>
+    <string name="director_film_form">Директор %1$s</string>
+    <string name="producer_film_form">Продюсер(ы) %1$s</string>
+    <string name="release_date_film_form">%1$s год</string>
+    <string name="name_character">Название персонажа</string>
+    <string name="height_character">Рост персонажа</string>
+    <string name="date_of_birth">Дата рождения</string>
+    <string name="home_world">Родная планета персонажа</string>
+    <string name="height_character_form">Рост %1$s</string>
+    <string name="date_of_birth_form">Дата рождения %1$s</string>
+    <string name="home_world_form">Родная планета %1$s</string>
+    <string name="name_planet">Название планеты</string>
+    <string name="name_planet_form">Название планеты %1$s</string>
+    <string name="diameter_planet">Диаметр планеты</string>
+    <string name="type_climate_planet">Тип климата</string>
+    <string name="gravity_planet">Гравитация</string>
+    <string name="type_landscape_planet">Тип местности</string>
+    <string name="population_planet">Население</string>
+    <string name="population_planet_form">Население %1$s</string>
+    <string name="diameter_planet_form">Диаметр планеты %1$s</string>
+    <string name="type_climate_planet_form">Тип климата %1$s</string>
+    <string name="gravity_planet_form">Гравитация %1$s</string>
+    <string name="type_landscape_planet_form">Тип местности %1$s</string>
+    <string name="something_went_wrong">Что-то пошло не так</string>
+</resources>

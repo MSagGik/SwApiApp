@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.PlanetFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_70"
+        android:background="@color/sky_500" />
+
+    <ImageView
+        android:id="@+id/button_back"
+        android:layout_width="@dimen/dimen_34"
+        android:layout_height="@dimen/dimen_34"
+        android:layout_margin="@dimen/dimen_18"
+        android:foreground="?attr/selectableItemBackground"
+        android:src="@drawable/ic_back" />
+
+    <TextView
+        android:id="@+id/name_character"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_34"
+        android:layout_marginTop="@dimen/dimen_18"
+        android:layout_marginStart="@dimen/dimen_70"
+        android:textColor="@color/sky_100"
+        android:fontFamily="@font/roboto_regular"
+        android:textFontWeight="300"
+        android:textSize="@dimen/text_size_22s"
+        android:gravity="center_vertical"
+        android:text="@string/home_world" />
+
+    <FrameLayout
+        android:id="@+id/card_planet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_24"
+        android:layout_marginTop="@dimen/dimen_102"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/name_planet"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_30"
+            android:text="@string/name_planet"
+            android:fontFamily="@font/roboto_bold"
+            android:textFontWeight="500"
+            android:textSize="@dimen/text_size_22s"
+            android:layout_gravity="top|start"
+            android:textColor="@color/dark_1000"/>
+
+        <TextView
+            android:id="@+id/population_planet"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_30"
+            android:text="@string/population_planet"
+            android:fontFamily="@font/roboto_regular"
+            android:textFontWeight="300"
+            android:textSize="@dimen/text_size_22s"
+            android:layout_marginTop="45dp"
+            android:layout_gravity="top|start"
+            android:textColor="@color/dark_1000"/>
+
+        <TextView
+            android:id="@+id/diameter_planet"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_30"
+            android:text="@string/diameter_planet"
+            android:fontFamily="@font/roboto_regular"
+            android:textFontWeight="300"
+            android:textSize="@dimen/text_size_22s"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="top|start"
+            android:textColor="@color/dark_1000"/>
+
+        <TextView
+            android:id="@+id/type_climate_planet"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_30"
+            android:text="@string/type_climate_planet"
+            android:fontFamily="@font/roboto_regular"
+            android:textFontWeight="300"
+            android:textSize="@dimen/text_size_22s"
+            android:layout_marginTop="115dp"
+            android:layout_gravity="top|start"
+            android:textColor="@color/dark_1000"/>
+
+        <TextView
+            android:id="@+id/gravity_planet"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_30"
+            android:text="@string/gravity_planet"
+            android:fontFamily="@font/roboto_regular"
+            android:textFontWeight="300"
+            android:textSize="@dimen/text_size_22s"
+            android:layout_marginTop="150dp"
+            android:layout_gravity="top|start"
+            android:textColor="@color/dark_1000"/>
+
+        <TextView
+            android:id="@+id/type_landscape_planet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type_landscape_planet"
+            android:fontFamily="@font/roboto_regular"
+            android:textFontWeight="300"
+            android:textSize="@dimen/text_size_22s"
+            android:layout_marginTop="185dp"
+            android:layout_gravity="top|start"
+            android:textColor="@color/dark_1000"/>
+
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_list_character"
+        android:layout_width="@dimen/dimen_30"
+        android:layout_height="@dimen/dimen_30"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/sky_500"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/nothing_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto_light"
+        android:textColor="@color/sky_500"
+        android:textSize="@dimen/text_size_16s"
+        android:textFontWeight="300"
+        android:text="@string/nothing_found"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/something_went_wrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto_light"
+        android:textColor="@color/sky_500"
+        android:textSize="@dimen/text_size_16s"
+        android:textFontWeight="300"
+        android:text="@string/something_went_wrong"
+        android:visibility="gone" />
+
+</FrameLayout>
