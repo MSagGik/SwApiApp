@@ -1,0 +1,7 @@
+<resources>
+    <style name="Base.Theme.SwApiApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/sky_500</item>
+    </style>
+
+    <style name="Theme.SwApiApp" parent="Base.Theme.SwApiApp" />
+</resources>
